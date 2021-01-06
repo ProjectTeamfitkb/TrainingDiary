@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,13 @@ using System.Windows.Shapes;
 
 namespace Training
 {
+    
     /// <summary>
     /// Логика взаимодействия для TrainingDiary.xaml
     /// </summary>
     public partial class TrainingDiary : Window
     {
+        
         public TrainingDiary()
         {
             InitializeComponent();
@@ -28,5 +31,116 @@ namespace Training
         {
             this.Close();
         }
+
+        private void Verx_Click(object sender, RoutedEventArgs e)
+        {
+
+        int index = Vib.SelectedIndex;
+        switch(index)
+        {
+            case 0:
+                if (!File.Exists(@"ВерхТела.txt"))
+                {
+                    StreamWriter writer = new StreamWriter(@"ВерхТела.txt", false, Encoding.GetEncoding(866));
+                    writer.Write(RecordigText.Text);
+                    writer.Close();
+                }
+                else
+                {
+                    using (var writer = new StreamWriter(@"ВерхТела.txt", true, Encoding.GetEncoding(866)))
+                    {
+                        //Добавляем к старому содержимому файла
+                        writer.WriteLine(RecordigText.Text);
+                    }
+                }
+            break;
+
+            case 1:
+            StreamReader openFile = new StreamReader(@"ВерхТела.txt", Encoding.GetEncoding(866));//вывод
+            RecordigText.Text += openFile.ReadToEnd();
+            openFile.Close();
+            break;
+
+            case 2:
+            File.Create(@"ВерхТела.txt").Close();  
+            break;
+         }
+
+        }
+
+        private void Niz_Click(object sender, RoutedEventArgs e)
+        {
+            int index = Vib.SelectedIndex;
+            switch (index)
+            {
+                case 0:
+                    if (!File.Exists(@"НизТела.txt"))
+                    {
+                        StreamWriter writer = new StreamWriter(@"НизТела.txt", false, Encoding.GetEncoding(866));
+                        writer.Write(RecordigText.Text);
+                        writer.Close();
+                    }
+                    else
+                    {
+                        using (var writer = new StreamWriter(@"НизТела.txt", true, Encoding.GetEncoding(866)))
+                        {
+                            //Добавляем к старому содержимому файла
+                            writer.WriteLine(RecordigText.Text);
+                        }
+                    }
+                    break;
+
+                case 1:
+                    StreamReader openFile = new StreamReader(@"НизТела.txt", Encoding.GetEncoding(866));//вывод
+                    RecordigText.Text += openFile.ReadToEnd();
+                    openFile.Close();
+                    break;
+
+                case 2:
+                    File.Create(@"НизТела.txt").Close();  
+                    break;
+            }
+        }
+
+        private void Ryki_Click(object sender, RoutedEventArgs e)
+        {
+
+            int index = Vib.SelectedIndex;
+            switch (index)
+            {
+                case 0:
+                    if (!File.Exists(@"Руки.txt"))
+                    {
+                        StreamWriter writer = new StreamWriter(@"Руки.txt", false, Encoding.GetEncoding(866));
+                        writer.Write(RecordigText.Text);
+                        writer.Close();
+                    }
+                    else
+                    {
+                        using (var writer = new StreamWriter(@"Руки.txt", true, Encoding.GetEncoding(866)))
+                        {
+                            //Добавляем к старому содержимому файла
+                            writer.WriteLine(RecordigText.Text);
+                        }
+                    }
+                    break;
+
+                case 1:
+                    StreamReader openFile = new StreamReader(@"Руки.txt", Encoding.GetEncoding(866));//вывод
+                    RecordigText.Text += openFile.ReadToEnd();
+                    openFile.Close();
+                    break;
+
+                case 2:
+                    File.Create(@"Руки.txt").Close();  
+                    break;
+            }
+        }
+
+        private void Clean_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            RecordigText.Text = " ";
+        }
+
     }
 }

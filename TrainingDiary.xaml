@@ -6,18 +6,23 @@
         <Grid.Background>
             <ImageBrush ImageSource="Assets/1.jpg"/>
         </Grid.Background>
-        <Button Content="Верх тела" HorizontalAlignment="Left" Height="85" FontSize="64" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="441" Margin="0,245,0,0"/>
-        <Button Content="Низ тела" HorizontalAlignment="Left" Height="85" FontSize="64" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="441" Margin="0,345,0,0"/>
-        <Button Content="Руки" HorizontalAlignment="Left" Height="85" FontSize="64" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="441" Margin="0,445,0,0"/>
+        <Button x:Name="Verx" Content="Верх тела" HorizontalAlignment="Left" Height="85" FontSize="64" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="441" Margin="55,210,0,0" Click="Verx_Click"/>
+        <Button x:Name="Niz" Content="Низ тела" HorizontalAlignment="Left" Height="85" FontSize="64" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="441" Margin="55,316,0,0" Click="Niz_Click"/>
+        <Button x:Name="Ryki" Content="Руки" HorizontalAlignment="Left" Height="85" FontSize="64" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="441" Margin="55,422,0,0" Click="Ryki_Click"/>
         <TextBlock x:Name="text1" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="174" Width="1356" FontFamily="SIEMENS_GOST Type A" FontSize="96" TextAlignment="Center" Text=""/>
         <Button x:Name="Back_Ground1" Content="" HorizontalAlignment="Left" Height="195" Margin="10,10,0,0" VerticalAlignment="Top" Width="203" BorderBrush="#FFE70304" Foreground="#FFE70304" Click="Back_Ground1_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="Assets/3.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Вывести рандомно" HorizontalAlignment="Left" Height="74" FontSize="32" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="289" Margin="664,630,0,0"/>
-        <Button Content="Добавить запись" HorizontalAlignment="Left" Height="74" FontSize="32" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="289" Margin="974,630,0,0"/>
         <TextBox x:Name="Calendar1" HorizontalAlignment="Left" Height="165" TextWrapping="Wrap" Text="Дневник Тренировок" VerticalAlignment="Top" Width="1124" FontSize="96" FontFamily="SIEMENS_GOST Type A" TextAlignment="Center" Margin="218,19,0,0" Background="#FFE70304" BorderBrush="#FFE70304"  RenderTransformOrigin="0.5,0.5"/>
-
+        <TextBox x:Name="RecordigText" HorizontalAlignment="Left" Height="517" Margin="757,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="585"/>
+        <ComboBox x:Name="Vib" Margin="517,210,658,488"  >
+            <ComboBoxItem Content="Добавить запись"   Width="168" Margin="26,0" Height="30"/>
+            <ComboBoxItem Content="Вывести"  Width="168" Margin="26,0" Height="24"/>
+            <ComboBoxItem Content="Очистить файл"  Width="168" Margin="26,0" Height="24"/>
+            <ComboBoxItem Content="Очистить экран" Selected="Clean_SelectionChanged"  Width="168" Margin="26,0" Height="24">
+            </ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Window>
