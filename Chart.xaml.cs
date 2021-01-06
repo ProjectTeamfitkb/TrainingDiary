@@ -28,5 +28,10 @@ namespace Training
         {
             this.Close();
         }
+
+        private void Calendar1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

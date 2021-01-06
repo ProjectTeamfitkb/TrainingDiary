@@ -17,3 +17,6 @@ C:\Users\Dell\Desktop\Training\Training\obj\Debug\TrainingDiary.baml
 C:\Users\Dell\Desktop\Training\Training\obj\Debug\Calendar.g.cs
 C:\Users\Dell\Desktop\Training\Training\obj\Debug\Chart.g.cs
 C:\Users\Dell\Desktop\Training\Training\obj\Debug\TrainingDiary.g.cs
+C:\Users\Dell\Documents\GIT\Training_Git\TrainingDiary\bin\Debug\Training.exe.config
+C:\Users\Dell\Documents\GIT\Training_Git\TrainingDiary\obj\Debug\Training.exe
+C:\Users\Dell\Documents\GIT\Training_Git\TrainingDiary\obj\Debug\Training.pdb

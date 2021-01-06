@@ -107,6 +107,12 @@ namespace Training {
             return;
             case 3:
             this.Calendar1 = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 18 "..\..\Chart.xaml"
+            this.Calendar1.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.Calendar1_TextChanged);
+            
+            #line default
+            #line hidden
             return;
             }
             this._contentLoaded = true;

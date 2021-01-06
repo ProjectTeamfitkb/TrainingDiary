@@ -17,7 +17,7 @@
         </Button>
         <Button Content="Вывести рандомно" HorizontalAlignment="Left" Height="74" FontSize="32" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="289" Margin="664,630,0,0"/>
         <Button Content="Добавить запись" HorizontalAlignment="Left" Height="74" FontSize="32" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="289" Margin="974,630,0,0"/>
-        <TextBox x:Name="Calendar1" HorizontalAlignment="Left" Height="165" TextWrapping="Wrap" Text="Training Diary" VerticalAlignment="Top" Width="1124" FontSize="96" FontFamily="SIEMENS_GOST Type A" TextAlignment="Center" Margin="222,19,0,0" Background="#FFE70304" BorderBrush="#FFE70304"  RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="Calendar1" HorizontalAlignment="Left" Height="165" TextWrapping="Wrap" Text="Дневник Тренировок" VerticalAlignment="Top" Width="1124" FontSize="96" FontFamily="SIEMENS_GOST Type A" TextAlignment="Center" Margin="218,19,0,0" Background="#FFE70304" BorderBrush="#FFE70304"  RenderTransformOrigin="0.5,0.5"/>
 
     </Grid>
 </Window>
