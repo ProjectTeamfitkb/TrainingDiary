@@ -18,8 +18,10 @@ namespace Training
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,5 +41,17 @@ namespace Training
         {
             new Calendar().ShowDialog();
         }
+
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmd.SelectedIndex == 0)
+                Properties.Settings.Default.languageCode = "ru-RU";
+            else
+                Properties.Settings.Default.languageCode = "en-US";
+            Properties.Settings.Default.Save();
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
+        }
+
     }
 }
