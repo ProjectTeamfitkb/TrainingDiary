@@ -15,7 +15,7 @@
                 <ImageBrush ImageSource="Assets/3.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="Calendar1" HorizontalAlignment="Left" Height="165" TextWrapping="Wrap" Text="Дневник Тренировок" VerticalAlignment="Top" Width="1124" FontSize="96" FontFamily="SIEMENS_GOST Type A" TextAlignment="Center" Margin="218,19,0,0" Background="#FFE70304" BorderBrush="#FFE70304"  RenderTransformOrigin="0.5,0.5"/>
+        <TextBlock x:Name="TrainingDiary_name" HorizontalAlignment="Left" Height="165" TextWrapping="Wrap" Text="Дневник Тренировок" VerticalAlignment="Top" Width="1124" FontSize="96" FontFamily="SIEMENS_GOST Type A" TextAlignment="Center" Margin="218,19,0,0" Background="#FFE70304" RenderTransformOrigin="0.5,0.5"/>
         <TextBox x:Name="RecordigText" HorizontalAlignment="Left" Height="517" Margin="757,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="585"/>
         <ComboBox x:Name="Vib" Margin="517,210,658,488"  >
             <ComboBoxItem Content="Добавить запись"   Width="168" Margin="26,0" Height="30"/>

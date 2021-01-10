@@ -15,7 +15,7 @@
                 <ImageBrush ImageSource="Assets/3.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="Calendar1" HorizontalAlignment="Left" Height="165" TextWrapping="Wrap" Text="Рейтинг" VerticalAlignment="Top" Width="1134" FontSize="96" FontFamily="SIEMENS_GOST Type A" TextAlignment="Center" Margin="226,10,0,0" Background="#FFE70304" BorderBrush="#FFE70304"  RenderTransformOrigin="0.5,0.5" TextChanged="Calendar1_TextChanged"/>
+        <TextBlock x:Name="Chart1" HorizontalAlignment="Left" Height="165" TextWrapping="Wrap" Text="Рейтинг" VerticalAlignment="Top" Width="1134" FontSize="96" FontFamily="SIEMENS_GOST Type A" TextAlignment="Center" Margin="226,10,0,0" Background="#FFE70304" RenderTransformOrigin="0.5,0.5" />
         <Button Content="Реверс" HorizontalAlignment="Left" Height="85" FontSize="32" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="157" Margin="470,245,0,0" Click="Button_Click_3"/>
         <TextBox x:Name="textt" HorizontalAlignment="Left" Height="285" Margin="761,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
         <Button Content="Реверс" HorizontalAlignment="Left" Height="85" FontSize="32" FontFamily="SIEMENS_GOST Type A" Background="#FFC0090A" VerticalAlignment="Top" Width="157" Margin="470,345,0,0" Click="Button_Click_4"/>
