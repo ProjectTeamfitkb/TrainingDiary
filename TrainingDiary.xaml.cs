@@ -41,13 +41,13 @@ namespace Training
             case 0:
                 if (!File.Exists(@"ВерхТела.txt"))
                 {
-                    StreamWriter writer = new StreamWriter(@"ВерхТела.txt", false, Encoding.GetEncoding(866));
+                    StreamWriter writer = new StreamWriter(@"ВерхТела.txt", false, Encoding.UTF8);
                     writer.Write(RecordigText.Text);
                     writer.Close();
                 }
                 else
                 {
-                    using (var writer = new StreamWriter(@"ВерхТела.txt", true, Encoding.GetEncoding(866)))
+                    using (var writer = new StreamWriter(@"ВерхТела.txt", true, Encoding.UTF8))
                     {
                         //Добавляем к старому содержимому файла
                         writer.WriteLine(RecordigText.Text);
@@ -56,7 +56,7 @@ namespace Training
             break;
 
             case 1:
-            StreamReader openFile = new StreamReader(@"ВерхТела.txt", Encoding.GetEncoding(866));//вывод
+            StreamReader openFile = new StreamReader(@"ВерхТела.txt", Encoding.UTF8);//вывод
             RecordigText.Text += openFile.ReadToEnd();
             openFile.Close();
             break;
@@ -76,13 +76,13 @@ namespace Training
                 case 0:
                     if (!File.Exists(@"НизТела.txt"))
                     {
-                        StreamWriter writer = new StreamWriter(@"НизТела.txt", false, Encoding.GetEncoding(866));
+                        StreamWriter writer = new StreamWriter(@"НизТела.txt", false, Encoding.UTF8);
                         writer.Write(RecordigText.Text);
                         writer.Close();
                     }
                     else
                     {
-                        using (var writer = new StreamWriter(@"НизТела.txt", true, Encoding.GetEncoding(866)))
+                        using (var writer = new StreamWriter(@"НизТела.txt", true, Encoding.UTF8))
                         {
                             //Добавляем к старому содержимому файла
                             writer.WriteLine(RecordigText.Text);
@@ -91,7 +91,7 @@ namespace Training
                     break;
 
                 case 1:
-                    StreamReader openFile = new StreamReader(@"НизТела.txt", Encoding.GetEncoding(866));//вывод
+                    StreamReader openFile = new StreamReader(@"НизТела.txt", Encoding.UTF8);//вывод
                     RecordigText.Text += openFile.ReadToEnd();
                     openFile.Close();
                     break;
@@ -111,13 +111,13 @@ namespace Training
                 case 0:
                     if (!File.Exists(@"Руки.txt"))
                     {
-                        StreamWriter writer = new StreamWriter(@"Руки.txt", false, Encoding.GetEncoding(866));
+                        StreamWriter writer = new StreamWriter(@"Руки.txt", false, Encoding.UTF8);
                         writer.Write(RecordigText.Text);
                         writer.Close();
                     }
                     else
                     {
-                        using (var writer = new StreamWriter(@"Руки.txt", true, Encoding.GetEncoding(866)))
+                        using (var writer = new StreamWriter(@"Руки.txt", true, Encoding.UTF8))
                         {
                             //Добавляем к старому содержимому файла
                             writer.WriteLine(RecordigText.Text);
@@ -126,7 +126,7 @@ namespace Training
                     break;
 
                 case 1:
-                    StreamReader openFile = new StreamReader(@"Руки.txt", Encoding.GetEncoding(866));//вывод
+                    StreamReader openFile = new StreamReader(@"Руки.txt", Encoding.UTF8);//вывод
                     RecordigText.Text += openFile.ReadToEnd();
                     openFile.Close();
                     break;

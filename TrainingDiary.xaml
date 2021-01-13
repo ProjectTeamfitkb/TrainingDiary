@@ -27,7 +27,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="TrainingDiary_name" Content="{x:Static language:Lang.dt_lan}" HorizontalAlignment="Left" Height="165"  VerticalAlignment="Top" Width="772" FontSize="96" FontFamily="SIEMENS_GOST Type A" Margin="325,19,0,0" Background="#FFE70304" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="RecordigText" HorizontalAlignment="Left" Height="517" Margin="54.6,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="585" Grid.Column="2" Grid.RowSpan="3"/>
+        <TextBox x:Name="RecordigText" HorizontalAlignment="Left" Height="517" Margin="54.6,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="585" Grid.Column="2" Grid.RowSpan="3" AcceptsReturn="True"/>
         <ComboBox x:Name="Vib" Margin="517,210,0.4,1.8" Grid.ColumnSpan="2" Grid.RowSpan="2"  >
             <ComboBoxItem Content="{x:Static language:Lang.dt_cm_lan1}"   Width="168" Margin="26,0" Height="24"/>
             <ComboBoxItem Content="{x:Static language:Lang.dt_cm_lan2}"  Width="168" Margin="26,0" Height="24"/>
