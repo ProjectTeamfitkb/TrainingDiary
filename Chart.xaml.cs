@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
-
+using Lib;
 
 namespace Training
 {
@@ -45,30 +45,15 @@ namespace Training
                 string fileName = @"ВерхТела1.txt";
                 string[] lines = File.ReadAllLines(fileName);
                 using (StreamWriter writer = new StreamWriter(fileName))
-                {
+                {   
                     foreach (string line in lines)
                         if (!string.IsNullOrWhiteSpace(line))
                             writer.WriteLine(line);
                 }
+                
                 string[] mass = File.ReadAllLines(@"ВерхТела1.txt");
                 int[] num = new int[mass.Length];
-                for (int i = 0; i < num.Length; i++)
-                {
-                    num[i] = Convert.ToInt32(mass[i]);
-                }
-                int temp;
-                for (int i = 0; i < num.Length - 1; i++)
-                {
-                    for (int j = i + 1; j < num.Length; j++)
-                    {
-                        if (num[i] > num[j])
-                        {
-                            temp = num[i];
-                            num[i] = num[j];
-                            num[j] = temp;
-                        }
-                    }
-                }
+                Lib.CustomControl1.puz(num, mass);
                 Random rnd = new Random(num.Length);
                 StreamReader openFile = new StreamReader(@"ФИО1.txt", Encoding.GetEncoding(866));
                 string[] FIO = File.ReadAllLines(@"ФИО1.txt");
@@ -101,23 +86,7 @@ namespace Training
                 }
                 string[] mass = File.ReadAllLines(@"НизТела1.txt");
                 int[] num = new int[mass.Length];
-                for (int i = 0; i < num.Length; i++)
-                {
-                    num[i] = Convert.ToInt32(mass[i]);
-                }
-                int temp;
-                for (int i = 0; i < num.Length - 1; i++)
-                {
-                    for (int j = i + 1; j < num.Length; j++)
-                    {
-                        if (num[i] > num[j])
-                        {
-                            temp = num[i];
-                            num[i] = num[j];
-                            num[j] = temp;
-                        }
-                    }
-                }
+                Lib.CustomControl1.puz(num, mass);
                 Random rnd = new Random(num.Length);
                 StreamReader openFile = new StreamReader(@"ФИО1.txt", Encoding.GetEncoding(866));
                 string[] FIO = File.ReadAllLines(@"ФИО1.txt");
@@ -150,23 +119,7 @@ namespace Training
                 }
                 string[] mass = File.ReadAllLines(@"Руки1.txt");
                 int[] num = new int[mass.Length];
-                for (int i = 0; i < num.Length; i++)
-                {
-                    num[i] = Convert.ToInt32(mass[i]);
-                }
-                int temp;
-                for (int i = 0; i < num.Length - 1; i++)
-                {
-                    for (int j = i + 1; j < num.Length; j++)
-                    {
-                        if (num[i] > num[j])
-                        {
-                            temp = num[i];
-                            num[i] = num[j];
-                            num[j] = temp;
-                        }
-                    }
-                }
+                Lib.CustomControl1.puz(num, mass);
                 Random rnd = new Random(num.Length);
                 StreamReader openFile = new StreamReader(@"ФИО1.txt", Encoding.GetEncoding(866));
                 string[] FIO = File.ReadAllLines(@"ФИО1.txt");
@@ -174,7 +127,7 @@ namespace Training
                 {
 
                     int value = rnd.Next(1, num.Length + 1);
-                    textt.Text += (FIO[value] + " с результатом: " + num[n]) + Environment.NewLine;
+                    textt.Text += (FIO[value] + "с результатом: " + num[n]) + Environment.NewLine;
                 }
 
             }
@@ -199,23 +152,7 @@ namespace Training
                 }
                 string[] mass = File.ReadAllLines(@"ВерхТела1.txt");
                 int[] num = new int[mass.Length];
-                for (int i = 0; i < num.Length; i++)
-                {
-                    num[i] = Convert.ToInt32(mass[i]);
-                }
-                int temp;
-                for (int i = 0; i < num.Length - 1; i++)
-                {
-                    for (int j = i + 1; j < num.Length; j++)
-                    {
-                        if (num[i] < num[j])
-                        {
-                            temp = num[i];
-                            num[i] = num[j];
-                            num[j] = temp;
-                        }
-                    }
-                }
+                Lib.CustomControl1.puz(num, mass);
                 Random rnd = new Random(num.Length);
                 StreamReader openFile = new StreamReader(@"ФИО1.txt", Encoding.GetEncoding(866));
                 string[] FIO = File.ReadAllLines(@"ФИО1.txt");
@@ -254,23 +191,7 @@ namespace Training
                 }
                 string[] mass = File.ReadAllLines(@"НизТела1.txt");
                 int[] num = new int[mass.Length];
-                for (int i = 0; i < num.Length; i++)
-                {
-                    num[i] = Convert.ToInt32(mass[i]);
-                }
-                int temp;
-                for (int i = 0; i < num.Length - 1; i++)
-                {
-                    for (int j = i + 1; j < num.Length; j++)
-                    {
-                        if (num[i] < num[j])
-                        {
-                            temp = num[i];
-                            num[i] = num[j];
-                            num[j] = temp;
-                        }
-                    }
-                }
+                Lib.CustomControl1.puz(num, mass);
                 Random rnd = new Random(num.Length);
                 StreamReader openFile = new StreamReader(@"ФИО1.txt", Encoding.GetEncoding(866));
                 string[] FIO = File.ReadAllLines(@"ФИО1.txt");
@@ -309,23 +230,7 @@ namespace Training
                 }
                 string[] mass = File.ReadAllLines(@"Руки1.txt");
                 int[] num = new int[mass.Length];
-                for (int i = 0; i < num.Length; i++)
-                {
-                    num[i] = Convert.ToInt32(mass[i]);
-                }
-                int temp;
-                for (int i = 0; i < num.Length - 1; i++)
-                {
-                    for (int j = i + 1; j < num.Length; j++)
-                    {
-                        if (num[i] < num[j])
-                        {
-                            temp = num[i];
-                            num[i] = num[j];
-                            num[j] = temp;
-                        }
-                    }
-                }
+                Lib.CustomControl1.puz(num, mass);
                 Random rnd = new Random(num.Length);
                 StreamReader openFile = new StreamReader(@"ФИО1.txt", Encoding.GetEncoding(866));
                 string[] FIO = File.ReadAllLines(@"ФИО1.txt");
@@ -377,7 +282,7 @@ namespace Training
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            if (!File.Exists(@"ВерхТела1.txt"))
+            if (!File.Exists(@"НизТела1.txt"))
             {
                 StreamWriter writer = new StreamWriter(@"НизТела1.txt", false, Encoding.GetEncoding(866));
                 writer.Write(textt.Text);
