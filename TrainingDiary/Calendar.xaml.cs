@@ -21,7 +21,7 @@ namespace Training
     public partial class Calendar : Window
     {
 
-        string data_calendar = @"C:\Users\Admin\Documents\GitHub\TrainingDiary\bin\Debug\Календарь.txt";
+        string data_calendar = @"C:\Users\Dell\Documents\GIT\Training_Git\TrainingDiary\TrainingDiary\bin\Debug\Календарь.txt";
 
         public Calendar()
         {
